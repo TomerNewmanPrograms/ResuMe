@@ -1,10 +1,10 @@
 FROM fedora
 FROM python:3.10
 
+ENV PYTHONUNBUFFERED  = 1
 
 RUN pip install --upgrade pip
 COPY .  .
-EXPOSE 8000
 
 RUN pip install -r requirements.txt
 
